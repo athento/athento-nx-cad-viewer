@@ -1,0 +1,17 @@
+<assembly>
+	<artifactSet id="project-plugins">
+		<artifacts>
+			<artifact group="org.athento" name="athento-nx-cad-viewer"
+				version="${projectParentVersion}" />
+		</artifacts>
+	</artifactSet>
+	<artifactSet id="athento-plugins">
+		<artifacts>
+<!--
+			<artifact group="org.athento.nuxeo" name="athento-nx-ANY_PLUGIN"
+				version="ANY_PLUGIN_VERSION" />
+-->
+		</artifacts>
+	</artifactSet>
+</assembly>
+

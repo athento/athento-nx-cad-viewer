@@ -1,0 +1,11 @@
+<assembly>
+	<fileSet id="resources">
+		<directory>target/classes</directory>
+		<excludes>
+			<exclude>**/.svn</exclude>
+			<exclude>**/.git</exclude>
+			<exclude>**/.gitignore</exclude>
+		</excludes>
+	</fileSet>
+</assembly>
+

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: josegonzalez
+Build-Jdk: 1.6.0_45
+Bundle-Vendor: Nuxeo
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Bundle-Version: 1.0
+Bundle-Name: org.yerbabuena.athento.cad.viewer
+Bundle-ManifestVersion: 1
+Bundle-SymbolicName: org.yerbabuena.athento.cad.viewer;singleton:=true
+

@@ -1,0 +1,8 @@
+<assembly>
+<!--  >> DO NOT edit this section and files -->
+	<include>common/artifacts.xml</include>
+	<include>common/commands.xml</include>
+<!--  << DO NOT edit this section and files -->
+	<include>artifacts.xml</include>
+</assembly>
+

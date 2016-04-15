@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+<head>
+<meta name="author" content="Tamas Vertse">
+<title>Start Applet</title>
+</head>
+<body>
+	<script language="JavaScript">
+	
+		function startApplet() {
+			appletsource = '<object name="autocadApplet" type="application/x-java-applet" height="0" width="0">' +
+			'<param name="code" value="OpenDesktopApplicationApplet" />' +
+			'<param name="archive" value="OpenDesktopApplicationApplet.jar" />' +
+			'<param name="app" value="C:\Program Files\Autodesk\AutoCAD 2014\acad.exe" />' +
+			'<param name="fileURL" value="http://190.216.146.6/nuxeo/restAPI/default/874de30f-5be2-42c6-956b-6a298ac8ae03/downloadFileAthento" />' +
+			'<param name="tmpDir" value="C:\Temp" />' +
+			'Applet failed to run. No Java plug-in was found.' +
+			'</object>';
+			
+			document.getElementById('appletplace').innerHTML = appletsource;
+		}
+	
+	</script>
+
+	<form name="myform">
+		<input type="button" value="Start Applet" ">
+		<a id="autocad_preview" onClick="startApplet()">Previsualizar en AutoCAD</a>
+	</form>
+	<div id="appletplace">
+	</div>
+</body>
+</html>

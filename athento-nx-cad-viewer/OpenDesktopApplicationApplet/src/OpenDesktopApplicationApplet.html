@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+<head>
+<meta name="author" content="Tamas Vertse">
+<title>Start Applet</title>
+</head>
+<body>
+	<script language="JavaScript">
+	
+		function startApplet() {
+			appletsource = '<object name="myApplet" type="application/x-java-applet" height="1" width="1">' +
+			'<param name="code" value="OpenDesktopApplicationApplet" />' +
+			'<param name="archive" value="OpenDesktopApplicationApplet.jar" />' +
+			'<param name="app" value="gedit">' +
+			'<param name="fileURL" value="http://localhost:8080/nuxeo/restAPI/default/c8b08e36-6ef1-40c9-9c39-a58c8c3470b6/downloadFileAthento">' +
+			'Applet failed to run. No Java plug-in was found.' +
+			'</object>';
+			
+			document.getElementById('appletplace').innerHTML = appletsource;
+		}
+	
+	</script>
+
+	<form name="myform">
+		<input type="button" value="Start Applet" ">
+		<a id="autocad_preview" onClick="startApplet()">Previsualizar en AutoCAD</a>
+	</form>
+	<div id="appletplace">
+	</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<assembly>
+	<assemble>
+		<outputFile>/</outputFile>
+		<set>resources</set>
+	</assemble>
+	<assemble>
+		<outputFile>/plugins</outputFile>
+		<set>athento-plugins</set>
+	</assemble>
+	<assemble>
+		<outputFile>/plugins</outputFile>
+		<set>project-plugins</set>
+	</assemble>
+</assembly>
+

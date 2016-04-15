@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Athento CAD Viewer</title>
+    <style type="text/css">
+        iframe.testFrame {
+            position: absolute;
+            width: 98%;
+            height: 97%;
+        }
+    </style>
+
+    <script type="text/javascript" src="/static/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var host = "http://sharecad.org/",
+            frame = "CADFrame/Load?url=";
+
+        var reloadIframe = function (frame, src) {
+            frame.src = src ? src : host + "cadframe";
+        }
+        var btn1Click = function () {
+            reloadIframe($("#frame1")[0], host + frame + "http://www.cadsofttools.com/dwgviewer/floorplan.dwg");
+        }
+        var btn2Click = function () {
+            reloadIframe($("#frame1")[0], host + frame + "http://www.cadstudio.cz/dl/budweiser.dwg");
+        }
+        
+        function getGET() {
+			var loc = document.location.href;
+			var getString = loc.split('?')[1];
+			var GET = getString.split('&');
+			var get = {};//this object will be filled with the key-value pairs and returned.
+
+			for ( var i = 0, l = GET.length; i < l; i++) {
+				var tmp = GET[i].split('=');
+				get[tmp[0]] = unescape(decodeURI(tmp[1]));
+			}
+			return get;
+		}
+
+		var get = getGET();
+        
+        //document.getElementById('frame1').src = "http://sharecad.org/cadframe/load?url=http://190.216.146.6/imagenes/" + get['docId'] + ".dwg";
+        
+        var url = "https://sharecad.org/cadframe/load?url=" + get['serverUrl'] + "/" + get['docId'] + ".dwg";
+        
+        function loadIframe(iframeName) {
+            var $iframe = $('#' + iframeName);
+            if ( $iframe.length ) {
+                $iframe.attr('src',url);   
+                return false;
+            }
+            return true;
+        }
+        
+    </script>
+
+</head>
+<body onload="loadIframe('frame1')">
+    <!--<button onclick="btn1Click()">
+        floorplan.dwg
+    </button>
+    <button onclick="btn2Click()">
+        budweiser.dwg
+    </button>
+-->
+    <iframe class="testFrame" id="frame1" 
+        scrolling="no"></iframe>
+</body>
+</html>
